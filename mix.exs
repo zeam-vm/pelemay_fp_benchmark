@@ -4,7 +4,7 @@ defmodule PelemayFpBenchmark.MixProject do
   def project do
     [
       app: :pelemay_fp_benchmark,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -22,7 +22,7 @@ defmodule PelemayFpBenchmark.MixProject do
   defp deps do
     [
       {:benchfella, "~> 0.3.5"},
-      {:pelemay_fp, "~> 0.1.0"},
+      {:pelemay_fp, "~> 0.1.1"},
       {:flow, "~> 1.0.0"},
       {:pelemay, "~> 0.0.14"}
     ]
