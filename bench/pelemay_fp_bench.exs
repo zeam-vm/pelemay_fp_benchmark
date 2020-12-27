@@ -44,4 +44,16 @@ defmodule PelemayFpBench do
   bench "PelemayFp and Pelemay" do
   	PelemayFp.map_chunk(@list, &LogisticMap.logistic_map_10(&1), &LogisticMap.logistic_map_10_pelemay(&1))
   end
+
+  bench "Stream" do
+    @list
+    |> Stream.map(&LogisticMap.logistic_map_10(&1))
+    |> Stream.run()
+  end
+
+  bench "Task.async_stream" do
+    @list 
+    |> Task.async_stream(&LogisticMap.logistic_map_10(&1))
+    |> Enum.to_list()
+  end
 end
