@@ -22,7 +22,7 @@ defmodule PelemayFpBenchmark.MixProject do
   defp deps do
     [
       {:benchfella, "~> 0.3.5"},
-      {:pelemay_fp, path: "../pelemay_fp"},
+      {:pelemay_fp, "~> 0.1.0"},
       {:flow, "~> 1.0.0"},
       {:pelemay, "~> 0.0.14"}
     ]
