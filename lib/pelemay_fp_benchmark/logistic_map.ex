@@ -5,7 +5,7 @@ defmodule LogisticMap do
     rem(22 * v * (v + 1), 6_700_417)
   end
 
-  def logistic_map_10(v) do
+  def logistic_map_work(v, 10) do
     logistic_map(v)
     |> logistic_map()
     |> logistic_map()
@@ -16,6 +16,21 @@ defmodule LogisticMap do
     |> logistic_map()
     |> logistic_map()
     |> logistic_map()
+  end
+
+  def logistic_map_work(v, work) do
+    new_work = div(work, 10)
+
+    logistic_map_work(v, new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
+    |> logistic_map_work(new_work)
   end
 
   defpelemay do
