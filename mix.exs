@@ -26,7 +26,7 @@ defmodule PelemayFpBenchmark.MixProject do
       {:benchfella, "~> 0.3.5"},
       {:pelemay_fp, "~> #{@version}"},
       {:flow, "~> 1.0.0"},
-      {:pelemay, "~> 0.0.14"}
+      {:pelemay, "~> 0.0.15"}
     ]
   end
 end
