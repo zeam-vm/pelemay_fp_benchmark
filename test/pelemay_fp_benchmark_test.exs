@@ -7,6 +7,11 @@ defmodule PelemayFpBenchmarkTest do
   end
 
   test "test PelemayFp and Pelemay" do
-    assert Enum.map(1..100000, &LogisticMap.logistic_map_10(&1)) == PelemayFp.map_chunk(1..100000, &LogisticMap.logistic_map_10(&1), &LogisticMap.logistic_map_10_pelemay(&1))
+    assert Enum.map(1..100_000, &LogisticMap.logistic_map_10(&1)) ==
+             PelemayFp.map_chunk(
+               1..100_000,
+               &LogisticMap.logistic_map_10(&1),
+               &LogisticMap.logistic_map_10_pelemay(&1)
+             )
   end
 end
