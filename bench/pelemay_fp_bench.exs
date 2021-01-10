@@ -1,7 +1,7 @@
 defmodule PelemayFpBench do
   use Benchfella
 
-  @list Enum.to_list(1..100000)
+  @list Enum.to_list(1..100000) |> Enum.shuffle()
 
   setup_all do
     LogisticMap.logistic_map_10_pelemay(@list)
